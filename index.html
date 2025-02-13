@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Main Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header-container">
+        <img src="logo.png" alt="Ministry of Human Resource Development of India">
+        <img src="0y1gnnosit0-8n2gal6-ita1cn021eeta.jpg" alt="NTA Symbol">
+    </div>
+
+    <h3>JOINT ENTRANCE EXAMINATION (MAIN) 2025</h3>
+
+    <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+        <h4><strong>JEE Main 2025 Session-2 Registrations are Open.</strong></h4>
+    </marquee>
+
+    <form name="jeeForm" onsubmit="return validateForm()">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName">
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender:</label>
+<select name="gender" id="gender" required>
+    <option value="" disabled selected hidden>Select</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Prefer not to say">Prefer not to say</option>
+</select>
+
+        <label for="subjectInterest">Subject of Interest:</label>
+        <input type="text" name="subjectInterest" id="subjectInterest">
+
+        <label for="languagesKnown">Languages Known:</label>
+        <input type="text" name="languagesKnown" id="languagesKnown">
+
+        <label for="contactNo">Contact No:</label>
+        <input type="tel" name="contactNo" id="contactNo">
+
+        <label for="address">Address:</label>
+        <textarea name="address" id="address"></textarea>
+
+        <label for="pinCode">Pin Code:</label>
+        <input type="text" name="pinCode" id="pinCode">
+
+        <label for="state">Name of State:</label>
+        <input type="text" name="state" id="state">
+
+        <label for="country">Country:</label>
+        <input type="text" name="country" id="country">
+
+        <label for="captcha">CAPTCHA:</label>
+        <div class="captcha-container">
+            <span id="captchaText"></span>
+            <button type="button" class="captcha-btn" onclick="generateCaptcha()">↻</button>
+        </div>
+        <input type="text" id="captchaInput" placeholder="Enter CAPTCHA">
+
+        <button class="reset" type="reset">Reset</button>
+        <button class="submit" type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
